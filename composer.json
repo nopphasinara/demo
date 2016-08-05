@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "laravelrus/sleepingowl": "dev-development",
+        "laravelrus/sleepingowl": "dev-feature/webpack",
         "baum/baum": "~1.1",
         "intervention/image": "^2.3",
         "fzaninotto/faker": "~1.4"
