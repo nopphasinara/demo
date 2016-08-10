@@ -56,7 +56,7 @@ AdminSection::registerModel(Contact2::class, function (ModelConfiguration $model
         $companies->getColumns()->disableControls();
 
         $tabs = AdminDisplay::tabbed([
-            'Contacts' => new \SleepingOwl\Admin\Form\FormElements([
+            'Contacts' => AdminForm::elements([
                 AdminFormElement::text('phone', 'Phone'),
                 AdminFormElement::columns()
                     ->addColumn([
@@ -65,10 +65,10 @@ AdminSection::registerModel(Contact2::class, function (ModelConfiguration $model
                         AdminFormElement::textarea('address', 'Address')
                     ])
             ]),
-            'Comment' => new \SleepingOwl\Admin\Form\FormElements([
+            'Comment' => AdminForm::elements([
                 AdminFormElement::wysiwyg('comment', 'Comment', 'simplemde')->disableFilter(),
             ]),
-            'Companies' => new \SleepingOwl\Admin\Form\FormElements([
+            'Companies' => AdminForm::elements([
                 AdminFormElement::multiselect('companies', 'Companies')->setModelForOptions(new Company)->setDisplay('title'),
                 $companies
             ]),
