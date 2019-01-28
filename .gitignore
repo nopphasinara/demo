@@ -1,0 +1,12 @@
+composer.lock
+/node_modules
+/public/storage
+/storage/*.key
+/storage/framework/cache
+/storage/framework/views
+/storage/framework/sessions
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
