@@ -38,6 +38,11 @@ class Users extends Section
      */
     public function onDisplay()
     {
+        // echo '<pre>'; print_r(auth()->user()->can('users.create')); echo '</pre>';
+        // echo '<pre>'; print_r(auth()->user()->hasRole('admin')); echo '</pre>';
+        // echo '<pre>'; print_r(auth()->user()->roles()->get()); echo '</pre>';
+        // echo '<pre>'; print_r(get_class_methods(auth()->user())); echo '</pre>';
+
         return AdminDisplay::table()
             ->with('roles')
             ->setHtmlAttribute('class', 'table-primary')
@@ -73,19 +78,19 @@ class Users extends Section
         return $this->onEdit(null);
     }
 
-    /**
-     * @return void
-     */
-    public function onDelete($id)
-    {
-        // todo: remove if unused
-    }
-
-    /**
-     * @return void
-     */
-    public function onRestore($id)
-    {
-        // todo: remove if unused
-    }
+    // /**
+    //  * @return void
+    //  */
+    // public function onDelete($id)
+    // {
+    //     // todo: remove if unused
+    // }
+    //
+    // /**
+    //  * @return void
+    //  */
+    // public function onRestore($id)
+    // {
+    //     // todo: remove if unused
+    // }
 }
